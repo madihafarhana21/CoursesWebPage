@@ -136,7 +136,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 &emsp;  &emsp;  &emsp;  &emsp; &emsp;   <h1>&emsp;  &emsp;  &emsp;  &emsp; &emsp;Item Added to Cart</h1></br>
 
-&emsp;  &emsp;  &emsp;  &emsp;  &emsp;&emsp;  &emsp;  &emsp;  &emsp; &emsp; &emsp;  &emsp;  &emsp;  &emsp; &emsp; <button type="button" style="font: bold 24px  Arial; color:green;"><a href="success.html"> Purchase</a></button><br />
+&emsp;  &emsp;  &emsp;  &emsp;  &emsp;&emsp;  &emsp;  &emsp;  &emsp; &emsp; &emsp;  &emsp;  &emsp;  &emsp; &emsp; <button type="button" style="font: bold 24px  Arial; color:green;">
+	<button id = "purchase1" onclick = "dataLayer.push({
+  event: "purchase",
+  ecommerce: {
+      transaction_id: "TID_12345",
+      affiliation: "online_course",
+      value: 25.41,
+      tax: 4.90,
+      shipping: 5.91,
+      currency: "INR",
+      items: [
+       {
+        item_id: "ITM_12345",
+        item_name: "Python",
+        affiliation: "online_course",
+        currency: "INR",
+        discount: 100,
+        item_brand: "MOOC",
+        item_category: "Python",
+        item_category2: "ML",
+        item_category3: "DS",
+        item_category4: "CS",
+        item_variant: "Online",
+        location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+        price: 5000,
+        quantity: 1
+      }]
+  }
+});"><a href="success.html"> Purchase</a></button><br />
 </body>
 
 </html>
