@@ -67,8 +67,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
      dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
 dataLayer.push({
-  event: "view_iten_list_event1",
+ event: "purchase",
   ecommerce: {
+	transaction_id: "TID_5674",
+	affiliation: "Online Course",
+	value: 100,
+	tax: 19.01,
+	shipping: 11.1,
+	currency: "INR",
     items: [
     {
       item_id: "ITM_01",
