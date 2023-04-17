@@ -192,8 +192,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 &emsp;  &emsp;  <img src="img/1.jpg" width="500" height="200">
 </p>
 
-&emsp;  &emsp;  &emsp;  &emsp;  <onclick="dataLayer.push({
-  event: "add_to_cart",
+&emsp;  &emsp;  &emsp;  &emsp;  <button id="btn1" onclick="dataLayer.push({
+  event: "view_iten_list_event",
   ecommerce: {
     items: [
     {
@@ -215,7 +215,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	
     ]
   }
-});" ><a href="cart.html" id="btncart12" style="font: bold 24px Arial; color:red;">Add-to-cart</a></button> &emsp; &emsp; <onclick="dataLayer.push({
+});" ><a href="cart.html" style="font: bold 24px Arial; color:red;">Add-to-cart</a></button> &emsp; &emsp; <onclick="dataLayer.push({
  event: "purchase",
   ecommerce: {
 	transaction_id: "TID_5674",
