@@ -64,6 +64,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 ]
             });
         });
+	
+	 dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+dataLayer.push({
+ event: "add_to_cart",
+  ecommerce: {
+    items: [
+    {
+      item_id: "ITM_01",
+      item_name: "Python",
+      discount: 11.1,
+      index: 0,
+      price: 2000,
+      quantity: 1
+    },
+	    {
+		    item_id: "ITM_02",
+		    item_name: "Web Analytics",
+		    discount: 12.4,
+		    index: 1,
+		    price: 2500,
+		    quantity: 1
+	    }
+    ]
+  }
+});
+	    
   
      dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
 dataLayer.push({
@@ -143,14 +169,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </p>
 
 &emsp;  &emsp;  &emsp;  &emsp;  <button id="btncart1" onclick="dataLayer.push({
-  event: "purchase",
+  event: "add_to_cart",
   ecommerce: {
-	transaction_id: "TID_5674",
-	affiliation: "Online Course",
-	value: 100,
-	tax: 19.01,
-	shipping: 11.1,
-	currency: "INR",
     items: [
     {
 	item_id: "ITM_01",
@@ -171,7 +191,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	
     ]
   }
-});" ><a href="success.html" id="btncart12" style="font: bold 24px Arial; color:red;">Purchase</a></button><br />
+});" ><a href="cart.html" id="btncart12" style="font: bold 24px Arial; color:red;">Add-to-cart</a></button> &emsp; &emsp; <button id="btncart2" onclick="dataLayer.push({
+ event: "purchase",
+  ecommerce: {
+	transaction_id: "TID_5674",
+	affiliation: "Online Course",
+	value: 100,
+	tax: 19.01,
+	shipping: 11.1,
+	currency: "INR",
+    items: [
+    {
+      item_id: "ITM_01",
+      item_name: "Python",
+      discount: 11.1,
+      index: 0,
+      price: 2000,
+      quantity: 1
+    },
+	    {
+		    item_id: "ITM_02",
+		    item_name: "Web Analytics",
+		    discount: 12.4,
+		    index: 1,
+		    price: 2500,
+		    quantity: 1
+	    }
+    ]
+  }
+});"><a href="success.html"><button type="button" style="font: bold 24px  Arial; color:green;">Purchase</a></button><br />
 </br></br>
 <p>
 &emsp;  &emsp;  <img src="img/2.jfif" width="500" height="200">
