@@ -64,6 +64,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 ]
             });
         });
+	    dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+dataLayer.push({
+  event: "view_iten_list_event",
+  ecommerce: {
+    items: [
+    {
+	    item_id: "ITM_01",
+      item_name: "Python",
+      discount: 11.1,
+      index: 0,
+      price: 2000,
+      quantity: 1
+    },
+	    {
+		    item_id: "ITM_02",
+		    item_name: "Web Analytics",
+		    discount: 12.4,
+		    index: 1,
+		    price: 2500,
+		    quantity: 1
+	    }
+    ]
+  }
+});
 	
 	 dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
 dataLayer.push({
